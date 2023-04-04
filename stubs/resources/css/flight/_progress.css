@@ -1,0 +1,16 @@
+.progress-bar {
+    width: 100%;
+    animation-name: progress-bar;
+    animation-iteration-count: 1;
+    animation-duration: 4s;
+}
+
+@keyframes progress-bar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

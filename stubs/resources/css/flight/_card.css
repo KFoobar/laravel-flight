@@ -1,0 +1,35 @@
+.card {
+    @apply w-full bg-white rounded-lg border border-gray-300 overflow-hidden
+}
+
+.card-header {
+    @apply border-b border-gray-200 py-6 px-6
+}
+
+.card-body {
+    @apply flex flex-col py-6 px-6
+}
+
+.card-footer {
+    @apply flex flex-row-reverse items-center justify-between bg-gray-50 border-t border-gray-200 py-4 px-6
+}
+
+.card-table {
+    @apply -my-6 -mx-6
+}
+
+.card-filter {
+    @apply border-b border-gray-200
+}
+
+.card-cta {
+    @apply flex flex-row items-center justify-between
+}
+
+.card-form {
+    @apply sm:divide-y sm:divide-gray-200 py-0
+}
+
+.card-form > div {
+    @apply py-6
+}

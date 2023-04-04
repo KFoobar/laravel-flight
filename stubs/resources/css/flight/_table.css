@@ -1,0 +1,23 @@
+thead {
+    @apply bg-gray-50 border-b border-gray-200
+}
+
+tbody {
+    @apply divide-y divide-gray-200
+}
+
+tfoot {
+    @apply bg-gray-50 border-t border-gray-200
+}
+
+th {
+    @apply text-left text-gray-400 text-sm font-semibold uppercase px-6 py-3
+}
+
+td {
+    @apply text-left text-gray-600 text-sm whitespace-nowrap px-6 py-4
+}
+
+tfoot td {
+    @apply text-left text-gray-400 text-sm whitespace-nowrap px-6 py-3
+}

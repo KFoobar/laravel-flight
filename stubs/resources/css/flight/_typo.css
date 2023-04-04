@@ -1,0 +1,23 @@
+.title {
+    @apply text-gray-900 text-2xl font-bold leading-6
+}
+
+.heading {
+    @apply text-xl text-gray-700 font-bold leading-tight tracking-tight
+}
+
+.subheading {
+    @apply text-base text-gray-700 font-bold leading-tight tracking-tight
+}
+
+.description {
+    @apply font-light text-sm text-gray-400 dark:text-gray-300 mt-2
+}
+
+.text-muted {
+    @apply text-gray-400 text-sm
+}
+
+.link {
+    @apply font-bold hover:text-blue-500
+}
