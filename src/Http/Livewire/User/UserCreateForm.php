@@ -24,7 +24,7 @@ class UserCreateForm extends SidebarComponent
         return [
             'user.name'  => 'required|string|max:255|bail',
             'user.email' => 'required|email|unique:users,email|bail',
-            'user.phone' => 'required|numeric|bail',
+            'user.phone' => 'nullable|numeric|bail',
             'roles'      => ['required', 'array', new ArrayAtLeastOneRequired, 'bail'],
         ];
     }
@@ -41,8 +41,7 @@ class UserCreateForm extends SidebarComponent
         $roles = array_keys(array_filter($this->roles));
 
         try {
-            $user = app(CreateUserAction::class)->execute($this->user);
-            app(UpdateRolesAction::class)->execute($user, $roles);
+            app(CreateUserAction::class)->execute($this->user);
         } catch (Exception $e) {
             return $this->showError('Failed to create user!');
         }

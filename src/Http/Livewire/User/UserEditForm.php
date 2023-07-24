@@ -17,8 +17,8 @@ class UserEditForm extends Component
     {
         return [
             'user.name'  => 'required|string|max:255|bail',
-            'user.email' => 'required|string|unique:users,email,'.$this->user->id.'|bail',
-            'user.phone' => 'required|numeric|bail',
+            'user.email' => 'required|string|unique:users,email,' . $this->user->id . '|bail',
+            'user.phone' => 'nullable|numeric|bail',
         ];
     }
 
