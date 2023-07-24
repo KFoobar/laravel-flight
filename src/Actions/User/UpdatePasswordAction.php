@@ -22,7 +22,6 @@ class UpdatePasswordAction
         $user->update([
             'password'              => Hash::make($password),
             'password_confirmed_at' => now(),
-            'password_updated_at'   => now(),
         ]);
 
         return true;

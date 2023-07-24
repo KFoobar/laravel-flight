@@ -1,13 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use KFoobar\Flight\Http\Controllers\Flight\Dashboard\DashboardController;
+use KFoobar\Flight\Http\Controllers\Flight\Invite\InviteController;
 use KFoobar\Flight\Http\Controllers\Flight\Profile\ProfileController;
 use KFoobar\Flight\Http\Controllers\Flight\Profile\SecurityController;
 use KFoobar\Flight\Http\Controllers\Flight\Terms\TermsController;
 use KFoobar\Flight\Http\Controllers\Flight\User\RoleController;
 use KFoobar\Flight\Http\Controllers\Flight\User\TeamController;
 use KFoobar\Flight\Http\Controllers\Flight\User\UserController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['web'])->group(function () {
     Route::redirect('/', 'login');
     Route::redirect('home', 'dashboard');
+
+    Route::group(['middleware' => ['guest']], function () {
+        Route::get('invites/{user:uuid}', [InviteController::class, 'form'])->name('invite');
+        Route::post('invites/{user:uuid}', [InviteController::class, 'update'])->name('invite.update');
+    });
 
     Route::group(['middleware' => ['auth', 'verified']], function () {
         Route::prefix('profile')->group(function () {

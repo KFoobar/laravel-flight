@@ -11,16 +11,14 @@ class UserInvitation extends Notification
 {
     use Queueable;
 
-    public $password;
-
     /**
      * Create a new notification instance.
      *
      * @param string $password
      */
-    public function __construct(string $password)
+    public function __construct()
     {
-        $this->password = $password;
+        //
     }
 
     /**
@@ -39,9 +37,8 @@ class UserInvitation extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->line('We have created a user account for you and assigned you a temporary password.')
-            ->line('Your password: ' . $this->password)
-            ->action('Sign in', url('/'));
+            ->line('We have created a new user account for you, to activate the account you need to set a personal password.')
+            ->action('Activate account', route('invite', $notifiable->uuid));
     }
 
     /**

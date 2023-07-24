@@ -11,7 +11,7 @@ class CreateUserAction
 {
     public function execute(array $data, array $roles = [], bool $notify = true)
     {
-        $password = Str::random(16);
+        $password = Str::random(32);
 
         $data = array_merge($data, [
             'password' => Hash::make($password),
@@ -25,7 +25,7 @@ class CreateUserAction
         }
 
         if ($notify === true) {
-            $user->notify(new UserInvitation($password));
+            $user->notify(new UserInvitation());
         }
 
         return $user;
