@@ -56,7 +56,7 @@ Route::middleware(['web'])->group(function () {
             Route::get('{team:uuid}', [TeamController::class, 'show'])->name('teams.show');
         });
 
-        Route::get('logout', [DashboardController::class, 'index'])->name('logout');
+        //Route::get('logout', [DashboardController::class, 'index'])->name('logout');
     });
 
     Route::get('terms-and-conditions', [TermsController::class, 'index'])->name('terms');

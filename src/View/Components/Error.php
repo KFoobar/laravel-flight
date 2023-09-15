@@ -25,6 +25,6 @@ class Error extends Component
      */
     public function render()
     {
-        return view('flight::components.input-error');
+        return view('flight::components.error');
     }
 }

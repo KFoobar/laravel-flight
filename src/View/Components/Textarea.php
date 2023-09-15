@@ -23,6 +23,6 @@ class Textarea extends Component
      */
     public function render()
     {
-        return view('flight::components.input-textarea');
+        return view('flight::components.textarea');
     }
 }

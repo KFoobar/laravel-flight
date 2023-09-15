@@ -42,6 +42,10 @@ class InviteController extends Controller
      */
     public function update(User $user, UpdatePasswordRequest $request)
     {
+        if (!empty($user->password_confirmed_at)) {
+            abort(404);
+        }
+
         app(UpdatePasswordAction::class)->execute($user, $request->password);
 
         return redirect()->route('dashboard');

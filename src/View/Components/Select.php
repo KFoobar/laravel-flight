@@ -23,6 +23,6 @@ class Select extends Component
      */
     public function render()
     {
-        return view('flight::components.input-select');
+        return view('flight::components.select');
     }
 }

@@ -23,6 +23,6 @@ class Input extends Component
      */
     public function render()
     {
-        return view('flight::components.input-field');
+        return view('flight::components.input');
     }
 }
