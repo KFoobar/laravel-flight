@@ -16,11 +16,14 @@
                         <span class="sr-only">View notifications</span>
                         <x-heroicon-o-bell class="h-6 w-6" />
                     </button>
-                    <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none ml-3">
-                        <span class="absolute -inset-1.5"></span>
-                        <span class="sr-only">Settings</span>
-                        <x-heroicon-o-wrench-screwdriver class="h-6 w-6" />
-                    </button>
+                     <div class="relative ml-3">
+                        <x-flight::menu.dropdown>
+                            <x-heroicon-o-wrench-screwdriver class="h-6 w-6" />
+                            <x-slot:items>
+                                <x-flight::navbar-admin />
+                            </x-slot:items>
+                        </x-flight::menu.dropdown>
+                    </div>
                     <div class="relative ml-3">
                         <x-flight::menu.dropdown>
                             <x-heroicon-o-user-circle class="h-6 w-6" />
