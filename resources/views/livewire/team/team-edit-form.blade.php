@@ -1,11 +1,6 @@
 <section class="card">
     <section class="card-header">
         <h2 class="heading">Settings</h2>
-        <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.
-        </div>
     </section>
     <section class="card-body card-form">
         <div class="input-group">

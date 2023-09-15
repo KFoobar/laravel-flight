@@ -2,9 +2,7 @@
     <section class="card-header">
         <h2 class="heading">Password</h2>
         <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.
+            Change your password by entering a new one.
         </div>
     </section>
     <section class="card-body card-form">

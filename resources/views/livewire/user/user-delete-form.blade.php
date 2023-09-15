@@ -2,9 +2,6 @@
     <div class="card-body card-cta">
         <div class="flex-grow">
             <h2 class="heading">Delete user</h2>
-            <div class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus corrupti atque repudiandae nam.
-            </div>
         </div>
         <div class="flex-shrink">
             <x-button wire:click="show" color="red">
